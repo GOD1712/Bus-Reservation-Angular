@@ -9,6 +9,15 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { SearchBusComponent } from './components/search-bus/search-bus.component';
 import { SeatsComponent } from './components/seats/seats.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
+import { BookBusComponent } from './components/book-bus/book-bus.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BookingsComponent } from './components/dashboard/bookings/bookings.component';
+import { ProfileComponent } from './components/dashboard/profile/profile.component';
+import { ChangePasswordComponent } from './components/dashboard/change-password/change-password.component';
+import { WalletComponent } from './components/dashboard/wallet/wallet.component';
+import { HomeComponent } from './components/home/home.component';
+import { MakePaymentComponent } from './components/make-payment/make-payment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +27,16 @@ import { SeatsComponent } from './components/seats/seats.component';
     RegisterComponent,
     LoginComponent,
     SearchBusComponent,
-    SeatsComponent
+    SeatsComponent,
+    ScheduleComponent,
+    BookBusComponent,
+    DashboardComponent,
+    BookingsComponent,
+    ProfileComponent,
+    ChangePasswordComponent,
+    WalletComponent,
+    HomeComponent,
+    MakePaymentComponent
   ],
   imports: [
     BrowserModule,

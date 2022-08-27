@@ -1,8 +1,25 @@
-<div class="mt-4" style="text-align: center;">
-    <div class="d-flex align-items-center justify-content-center flex-row flex-wrap">
-        <div class="seat" *ngFor="let item of [].constructor(35); let i = index">
-            {{i+1}}
+<div class="my-4 seats-main">
+    <h2 class="my-4">Select seats</h2>
+    <div class="row justify-content-center">
+        <div class="col-sm-2" style="margin-right: 25px;">
+            <div class="d-flex flex-row flex-wrap">
+                <div class="seat" *ngFor="let item of [].constructor(14); let i = index">
+                    L{{i+1}}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="margin-left: 25px;">
+            <div class="d-flex flex-row flex-wrap">
+                <div class="seat" *ngFor="let item of [].constructor(21); let i = index">
+                    R{{i+1}}
+                </div>
+            </div>
         </div>
     </div>
-    <button style="margin: 10px auto" class="btn btn-primary">Book</button>
+    <div class="d-flex justify-content-center flex-row flex-wrap" style="margin-left: -15px;">
+        <div class="seat" *ngFor="let item of [].constructor(6); let i = index">
+            B{{i+1}}
+        </div>
+    </div>
+    <button style="margin: 10px auto" class="btn btn-primary btn-lg my-4">Book</button>
 </div>
