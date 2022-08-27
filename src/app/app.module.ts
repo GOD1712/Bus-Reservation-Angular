@@ -18,6 +18,7 @@ import { ChangePasswordComponent } from './components/dashboard/change-password/
 import { WalletComponent } from './components/dashboard/wallet/wallet.component';
 import { HomeComponent } from './components/home/home.component';
 import { MakePaymentComponent } from './components/make-payment/make-payment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { MakePaymentComponent } from './components/make-payment/make-payment.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
