@@ -2,25 +2,23 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th scope="col">Booking Id</th>
-            <th scope="col">Operator</th>
+            <th scope="col">Schedule Id</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
             <th scope="col">Departure Date and Time</th>
             <th scope="col">Estimated Arrival Date and Time</th>
-            <th scope="col">No. of seats available</th>
+            <th scope="col">Price (per Seat)</th>
             <th scope="col">Book</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1001</th>
-            <td>Purple Travellers</td>
-            <td>Delhi</td>
-            <td>Pune</td>
-            <td>17-05-22 17:30</td>
-            <td>18-05-22 21:30</td>
-            <td>20</td>
+        <tr *ngFor="let schedule of schedules">
+            <th scope="row">{{schedule.id}}</th>
+            <td>{{schedule.startingPoint}}</td>
+            <td>{{schedule.destination}}</td>
+            <td>{{schedule.scheduleDate + " "+ schedule.departureTime}}</td>
+            <td>{{schedule.scheduleDate + " " + schedule.estimatedArrivalTime}}</td>
+            <td>{{schedule.fareAmount}}</td>
             <td>
                 <button class="btn btn-primary btn-sm" (click)="goToSeats()">Book</button>
             </td>

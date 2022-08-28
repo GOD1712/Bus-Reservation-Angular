@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "abc",
+      "fullname": "abc xyz",
+      "password": "kdjls",
+      "gender": "male",
+      "address": "fhskhfksla",
+      "email": "asd@email.com",
+      "contactNo": "9794579359",
+      "dob": "17-09-99"
+    },
+    {
+      "userName": "slfjlfjeiruruoeri",
+      "fullName": "slfjljslf",
+      "password": "riuu845",
+      "gender": "female",
+      "address": "uiorouutuotrejtjjdg j sgl ",
+      "email": "fhk@email.com",
+      "dob": "2015-07-16",
+      "id": 2
+    },
+    {
+      "userName": "qwerty",
+      "fullName": "asdf",
+      "password": "jkl12",
+      "gender": "male",
+      "address": "dfjls fglj ggorgjoregj",
+      "email": "djfjfka@email.com",
+      "dob": "2004-07-08",
+      "id": 3
+    },
+    {
+      "userName": "cnvdkgj",
+      "fullName": "ghlsdjfl",
+      "password": "iour4r8u",
+      "gender": "female",
+      "address": "jlsafj sjiout ngjag ",
+      "email": "fdkjs@email.com",
+      "dob": "2010-11-18",
+      "id": 4
+    },
+    {
+      "userName": "oru489",
+      "fullName": "lfsjl;f a;",
+      "password": "fh475",
+      "gender": "male",
+      "address": "fjsajior gjhgio lsja ",
+      "email": "jhsfk456@email.com",
+      "dob": "2014-06-30",
+      "id": 5
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "busId": 1,
+      "startingPoint": "Pune",
+      "destination": "Mumbai",
+      "fareAmount": 2000,
+      "estimatedArrivalTime": "17:21",
+      "departureTime": "13:50",
+      "scheduleDate": "2022-09-17"
+    },
+    {
+      "id": 2,
+      "busId": 2,
+      "startingPoint": "Pune",
+      "destination": "Mumbai",
+      "fareAmount": 3000,
+      "estimatedArrivalTime": "12:21",
+      "departureTime": "08:50",
+      "scheduleDate": "2022-09-17"
+    },
+    {
+      "id": 3,
+      "busId": 2,
+      "startingPoint": "Pune",
+      "destination": "Bangalore",
+      "fareAmount": 5000,
+      "estimatedArrivalTime": "12:21",
+      "departureTime": "08:50",
+      "scheduleDate": "2022-05-22"
+    }
+  ]
+}

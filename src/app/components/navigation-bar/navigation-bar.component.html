@@ -20,7 +20,22 @@
             </li>
         </ul>
     </div>
-    <div class="ms-auto">
+    <div class="ms-auto" *ngIf="!loggedIn; else elseBlock">
         <button class="btn btn-danger" (click)="goToLogin()">Login/Sign Up</button>
     </div>
+    <ng-template #elseBlock>
+        <div class="ms-auto me-4">
+
+            <div class="dropdown">
+                <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    <img src="https://www.w3schools.com/w3images/avatar5.png" class="rounded-circle"
+                        style="width: 50px;" alt="Avatar" />
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="dashboard">Dashboard</a></li>
+                    <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </ng-template>
 </nav>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/Entities/User';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +12,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   registrationForm!: FormGroup;
 
-  constructor() { }
+  constructor(private UserSer: UserService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.registrationForm = new FormGroup({
@@ -25,6 +30,15 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.registrationForm.value);
+    const formValues = this.registrationForm.value;
+    const user = new User(formValues.userName, formValues.fullName,
+      formValues.password, formValues.gender, formValues.address,
+      formValues.email, formValues.contactNo, formValues.dob);
+    this.UserSer.addUser(user).subscribe(
+      (data) => {
+        sessionStorage.setItem("userData", JSON.stringify(data));
+        this.router.navigate(["../"], { relativeTo: this.route });
+      }
+    );
   }
 }

@@ -1,8 +1,9 @@
 import { Time } from "@angular/common";
 
-export class Bus {
+export class Schedule {
     constructor(
-        public scheduleId: number,
+        public id: number,
+        public busId: number,
         public startingPoint: string,
         public destination: string,
         public fareAmount: number,

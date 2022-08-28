@@ -1,4 +1,4 @@
 <div class="text-center my-4">
-    <app-search-bus></app-search-bus>
-    <app-schedule></app-schedule>
+    <app-search-bus (fetchBusDetails)="fetchedBuses($event)"></app-search-bus>
+    <app-schedule *ngIf="showAvailableBuses" [schedules]="schedules"></app-schedule>
 </div>

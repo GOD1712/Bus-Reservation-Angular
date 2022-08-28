@@ -3,21 +3,24 @@
     <div class="row justify-content-center">
         <div class="col-sm-2" style="margin-right: 25px;">
             <div class="d-flex flex-row flex-wrap">
-                <div class="seat" *ngFor="let item of [].constructor(14); let i = index">
+                <div #lseats class="seat" *ngFor="let item of [].constructor(14); let i = index"
+                    (click)="onClick('L',i+1,lseats)">
                     L{{i+1}}
                 </div>
             </div>
         </div>
         <div class="col-sm-3" style="margin-left: 25px;">
             <div class="d-flex flex-row flex-wrap">
-                <div class="seat" *ngFor="let item of [].constructor(21); let i = index">
+                <div #rseats class="seat" *ngFor="let item of [].constructor(21); let i = index"
+                    (click)="onClick('R',i+1,rseats)">
                     R{{i+1}}
                 </div>
             </div>
         </div>
     </div>
     <div class="d-flex justify-content-center flex-row flex-wrap" style="margin-left: -15px;">
-        <div class="seat" *ngFor="let item of [].constructor(6); let i = index">
+        <div #bseats class="seat" *ngFor="let item of [].constructor(6); let i = index"
+            (click)="onClick('B',i+1,bseats)">
             B{{i+1}}
         </div>
     </div>

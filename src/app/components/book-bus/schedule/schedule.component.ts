@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Schedule } from 'src/app/Entities/Schedule';
 
 @Component({
   selector: 'app-schedule',
@@ -7,11 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
+  @Input() schedules: Schedule[] = [];
 
   constructor(private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+
   }
 
   goToSeats() {

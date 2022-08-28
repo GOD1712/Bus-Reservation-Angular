@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,9 +9,9 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { SearchBusComponent } from './components/search-bus/search-bus.component';
+import { SearchBusComponent } from './components/book-bus/search-bus/search-bus.component';
 import { SeatsComponent } from './components/seats/seats.component';
-import { ScheduleComponent } from './components/schedule/schedule.component';
+import { ScheduleComponent } from './components/book-bus/schedule/schedule.component';
 import { BookBusComponent } from './components/book-bus/book-bus.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BookingsComponent } from './components/dashboard/bookings/bookings.component';
@@ -43,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
