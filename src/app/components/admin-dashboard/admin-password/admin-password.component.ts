@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.css']
+  selector: 'app-admin-password',
+  templateUrl: './admin-password.component.html',
+  styleUrls: ['./admin-password.component.css']
 })
-export class ChangePasswordComponent implements OnInit {
+export class AdminPasswordComponent implements OnInit {
+
   changePasswordForm!: FormGroup;
   error: boolean = false;
   msg: string = "";

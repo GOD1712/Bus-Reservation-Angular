@@ -16,14 +16,17 @@ export class BookingsComponent implements OnInit {
 
   downloadPdf() {
     var doc = new jsPDF();
-    var col = [["Id", "TypeID", "Accnt", "Amnt", "Start", "End", "Contrapartida"]];
+    doc.text("Bus Ticket", 10, 10);
     var rows: any = [];
 
     var rowCountModNew = [
-      ["1721079361", "0001", "2100074911", "200", "22112017", "23112017", "51696"],
-      ["1721079362", "0002", "2100074912", "300", "22112017", "23112017", "51691"],
-      ["1721079363", "0003", "2100074913", "400", "22112017", "23112017", "51692"],
-      ["1721079364", "0004", "2100074914", "500", "22112017", "23112017", "51693"]
+      ["Id", "1721"],
+      ["Starting Point", "Pune"],
+      ["Destination", "Mumbai"],
+      ["Depature Date and Time", "2022-09-17 16:22",],
+      ["Arrival Date and Time", "2022-09-17 19:30"],
+      ["No. of Seats", "4"],
+      ["Amount Paid", "5200"]
     ]
 
 
@@ -33,11 +36,10 @@ export class BookingsComponent implements OnInit {
     });
 
     autoTable(doc, {
-      head: col,
       body: rows,
       didDrawCell: (data) => { },
     });
-    doc.save('Test.pdf');
+    doc.save('Ticket.pdf');
   }
 
 }

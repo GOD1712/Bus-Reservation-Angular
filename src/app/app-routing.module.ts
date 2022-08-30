@@ -11,6 +11,13 @@ import { RegisterComponent } from './components/register/register.component';
 import { SeatsComponent } from './components/seats/seats.component';
 import { MakePaymentComponent } from './components/make-payment/make-payment.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotfoundPageComponent } from './components/notfound-page/notfound-page.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminAddbusComponent } from './components/admin-dashboard/admin-addbus/admin-addbus.component';
+import { AdminScheduleComponent } from './components/admin-dashboard/admin-schedule/admin-schedule.component';
+import { AdminPasswordComponent } from './components/admin-dashboard/admin-password/admin-password.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -18,6 +25,7 @@ const routes: Routes = [
   { path: "seats", component: SeatsComponent },
   { path: "bus-schedule", component: BookBusComponent },
   { path: "payment", component: MakePaymentComponent },
+  { path: "contact-us", component: ContactUsComponent },
   {
     path: "dashboard", component: DashboardComponent,
     children: [
@@ -27,7 +35,17 @@ const routes: Routes = [
       { path: "wallet", component: WalletComponent }
     ]
   },
-  { path: "", component: HomeComponent, pathMatch: "full" }
+  { path: "admin-login", component: AdminLoginComponent },
+  {
+    path: "admin-dashboard", component: AdminDashboardComponent,
+    children: [
+      { path: "admin-addbus", component: AdminAddbusComponent },
+      { path: "admin-shedule", component: AdminScheduleComponent },
+      { path: "admin-password", component: AdminPasswordComponent }
+    ]
+  },
+  { path: "", component: HomeComponent, pathMatch: "full" },
+  { path: "**", component: NotfoundPageComponent }
 ];
 
 @NgModule({

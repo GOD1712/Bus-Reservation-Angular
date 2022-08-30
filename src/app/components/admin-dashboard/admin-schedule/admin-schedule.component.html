@@ -1,0 +1,86 @@
+<section class="my-4" style="text-align: center;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+                <h1 class="mb-4"> Update-Schedule </h1>
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0">Starting Point </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="text" class="form-control" formControlName="spoint" />
+                                    <span style="color:red" *ngIf="spoint && spoint.invalid && spoint.touched">This
+                                        input field is not Valid</span>
+                                </div>
+                            </div>
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0"> Destination </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="txt" class="form-control" formControlName="destination" />
+                                    <span style="color:red"
+                                        *ngIf="destination && destination.invalid && destination.touched ">This input
+                                        field is not Valid</span>
+                                </div>
+                            </div>
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0"> Fare Amount </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="txt" class="form-control" formControlName="fareAmount" />
+                                    <span style="color:red"
+                                        *ngIf="fareAmount && fareAmount.invalid && fareAmount.touched">This input field
+                                        is not Valid</span>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0"> Estimated Arrival Time </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="time" class="form-control" formControlName="arrivalTime" />
+                                    <span style="color:red"
+                                        *ngIf="arrivalTime && arrivalTime.invalid && arrivalTime.touched">This input
+                                        field is not Valid</span>
+                                </div>
+                            </div>
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0"> Estimated Departure Time </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="time" class="form-control " formControlName="depTime" />
+                                    <span style="color:red" *ngIf="depTime && depTime.invalid && depTime.touched">This
+                                        input field is not Valid</span>
+                                </div>
+                            </div>
+                            <div class="row align-items-center pt-4 pb-3">
+                                <div class="col-md-3 ps-5">
+                                    <h6 class="mb-0"> Schedule date </h6>
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <input type="date" class="form-control " formControlName="sheduleDate" />
+                                    <span style="color:red"
+                                        *ngIf="sheduleDate && sheduleDate.invalid && sheduleDate.touched">This input
+                                        field is not Valid</span>
+                                </div>
+                            </div>
+
+
+                            <hr class="mx-n3">
+                            <div class="px-5 py-4">
+                                <button type="update" class="btn btn-primary btn-lg"> Update </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

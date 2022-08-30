@@ -21,6 +21,13 @@ import { WalletComponent } from './components/dashboard/wallet/wallet.component'
 import { HomeComponent } from './components/home/home.component';
 import { MakePaymentComponent } from './components/make-payment/make-payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotfoundPageComponent } from './components/notfound-page/notfound-page.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminAddbusComponent } from './components/admin-dashboard/admin-addbus/admin-addbus.component';
+import { AdminPasswordComponent } from './components/admin-dashboard/admin-password/admin-password.component';
+import { AdminScheduleComponent } from './components/admin-dashboard/admin-schedule/admin-schedule.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +46,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChangePasswordComponent,
     WalletComponent,
     HomeComponent,
-    MakePaymentComponent
+    MakePaymentComponent,
+    NotfoundPageComponent,
+    ContactUsComponent,
+    AdminDashboardComponent,
+    AdminAddbusComponent,
+    AdminPasswordComponent,
+    AdminScheduleComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

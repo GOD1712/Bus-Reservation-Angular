@@ -24,13 +24,13 @@ export class SearchBusComponent implements OnInit {
   }
 
   onSubmit() {
-    this.fetchBusDetails.emit(true);
     const formValues = this.busSearchForm.value;
     this.scheduleSer.getSchedules(formValues.startingPoint, formValues.destination, formValues.departureDate.split('T')[0]).subscribe(
       (data) => {
         this.scheduleSer.updateSchedules(data);
       }
     );
+    this.fetchBusDetails.emit(true);
   }
 
 }

@@ -3,6 +3,7 @@ export class Bus {
         public busId: number,
         public busPlateNo: string,
         public capacity: number,
-        public busType: string
+        public busType: string,
+        public alreadyBookedSeats: string[]
     ) { }
 }

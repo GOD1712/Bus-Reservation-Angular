@@ -2,7 +2,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th scope="col">Schedule Id</th>
+            <th scope="col">Sr. No.</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
             <th scope="col">Departure Date and Time</th>
@@ -12,15 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let schedule of schedules">
-            <th scope="row">{{schedule.id}}</th>
+        <tr *ngFor="let schedule of schedules; let i = index">
+            <th scope="row">{{i+1}}</th>
             <td>{{schedule.startingPoint}}</td>
             <td>{{schedule.destination}}</td>
             <td>{{schedule.scheduleDate + " "+ schedule.departureTime}}</td>
             <td>{{schedule.scheduleDate + " " + schedule.estimatedArrivalTime}}</td>
             <td>{{schedule.fareAmount}}</td>
             <td>
-                <button class="btn btn-primary btn-sm" (click)="goToSeats()">Book</button>
+                <button class="btn btn-primary btn-sm" (click)="goToSeats(schedule)">Book</button>
             </td>
         </tr>
     </tbody>

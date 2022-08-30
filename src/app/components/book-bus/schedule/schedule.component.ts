@@ -18,7 +18,8 @@ export class ScheduleComponent implements OnInit {
 
   }
 
-  goToSeats() {
+  goToSeats(schedule: any) {
+    sessionStorage.setItem("scheduleData", JSON.stringify(schedule));
     this.router.navigate(['/', 'seats'], { relativeTo: this.route });
   }
 

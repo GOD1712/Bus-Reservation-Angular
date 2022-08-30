@@ -35,7 +35,8 @@ export class LoginComponent implements OnInit {
           this.errorOccured = true;
         }
         else {
-          this.user = data[0];
+          //this.user = data[0];
+          this.user = data;
           if (this.user.password !== formValues.password) {
             this.msg = "Incorrect Password";
             this.errorOccured = true;

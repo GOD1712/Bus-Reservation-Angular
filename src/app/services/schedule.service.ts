@@ -8,13 +8,14 @@ import { Schedule } from '../Entities/Schedule';
 })
 export class ScheduleService {
   schedules: Schedule[] = [];
-  private baseUrl: string = "http://localhost:3000/schedules";
+  private baseUrl: string = "http://localhost:8084/scheduledBus";
 
   constructor(private httpSer: HttpClient) { }
 
 
   getSchedules(startingPoint: string, destination: string, scheduleDate: string): Observable<any> {
-    return this.httpSer.get<Schedule[]>(this.baseUrl + "?startingPoint=" + startingPoint + "&destination=" + destination + "&scheduleDate=" + scheduleDate);
+    // return this.httpSer.get<Schedule[]>(this.baseUrl + "?startingPoint=" + startingPoint + "&destination=" + destination + "&scheduleDate=" + scheduleDate);
+    return this.httpSer.get<Schedule[]>(this.baseUrl + "/schedules/" + startingPoint + "/" + destination + "/" + scheduleDate);
   }
 
   updateSchedules(schedules: Schedule[]) {
