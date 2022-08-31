@@ -28,6 +28,7 @@ import { AdminAddbusComponent } from './components/admin-dashboard/admin-addbus/
 import { AdminPasswordComponent } from './components/admin-dashboard/admin-password/admin-password.component';
 import { AdminScheduleComponent } from './components/admin-dashboard/admin-schedule/admin-schedule.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     AdminAddbusComponent,
     AdminPasswordComponent,
     AdminScheduleComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,

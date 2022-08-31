@@ -6,9 +6,9 @@ export class Schedule {
         public startingPoint: string,
         public destination: string,
         public fareAmount: number,
-        public estimatedArrivalTime: Time,
-        public departureTime: Time,
-        public scheduleDate: Date,
+        public scheduleDate: string,
+        public estimatedArrivalTime: string,
+        public departureTime: string,
         public bus: Bus
     ) { }
 }

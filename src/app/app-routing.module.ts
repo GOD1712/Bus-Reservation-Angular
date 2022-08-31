@@ -18,6 +18,7 @@ import { AdminAddbusComponent } from './components/admin-dashboard/admin-addbus/
 import { AdminScheduleComponent } from './components/admin-dashboard/admin-schedule/admin-schedule.component';
 import { AdminPasswordComponent } from './components/admin-dashboard/admin-password/admin-password.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: "bus-schedule", component: BookBusComponent },
   { path: "payment", component: MakePaymentComponent },
   { path: "contact-us", component: ContactUsComponent },
+  { path: "payment-success", component: PaymentSuccessComponent },
   {
     path: "dashboard", component: DashboardComponent,
     children: [

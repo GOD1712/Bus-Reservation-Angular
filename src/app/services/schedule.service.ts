@@ -25,4 +25,8 @@ export class ScheduleService {
   fetchLocalSchedules() {
     return this.schedules;
   }
+
+  public addSchedule(s: Schedule): Observable<any> {
+    return this.httpSer.post<Schedule>(this.baseUrl + "/addSchedule", s);
+  }
 }

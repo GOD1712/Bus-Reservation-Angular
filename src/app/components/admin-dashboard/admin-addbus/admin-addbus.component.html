@@ -6,16 +6,6 @@
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
                         <form [formGroup]="busForm" (ngSubmit)="onSubmit()">
-                            <div class="row align-items-center pt-4 pb-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0"> Bus Details </h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control " formControlName="details" />
-                                    <span style="color:red" *ngIf="details && details.invalid && details.touched">This
-                                        input field is not Valid</span>
-                                </div>
-                            </div>
 
                             <div class="row align-items-center py-3">
                                 <div class="col-md-3 ps-5">

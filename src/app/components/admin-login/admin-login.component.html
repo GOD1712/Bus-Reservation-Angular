@@ -2,10 +2,10 @@
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-9">
-                <h1 class="mb-4"> Login </h1>
+                <h1 class="mb-4">Admin Login </h1>
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
-                        <!--<div *ngIf="errorOccured" class="alert alert-danger">{{msg}}</div>-->
+                        <div *ngIf="wrongData" class="alert alert-danger">{{msg}}</div>
                         <form [formGroup]="adForm" (ngSubmit)="onSubmit()">
                             <div class="row align-items-center pt-4 pb-3">
                                 <div class="col-md-3 ps-5">

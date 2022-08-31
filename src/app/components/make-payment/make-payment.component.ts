@@ -74,7 +74,7 @@ export class MakePaymentComponent implements OnInit {
       (data) => console.log(data)
     );
 
-    //this.router.navigate(["/", "feedback"], { relativeTo: this.route });
+    //this.router.navigate(["/","payment-success"], { relativeTo: this.route });
   }
 
 }

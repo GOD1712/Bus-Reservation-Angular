@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Bus } from 'src/app/Entities/Bus';
+import { BusService } from 'src/app/services/bus.service';
 
 @Component({
   selector: 'app-admin-addbus',
@@ -8,23 +10,32 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AdminAddbusComponent implements OnInit {
   busForm!: FormGroup;
-  constructor() { }
+  bus!: Bus;
+  constructor(
+    private busSer: BusService
+  ) { }
 
   ngOnInit(): void {
     this.busForm = new FormGroup({
-      details: new FormControl("", Validators.required),
       plateNo: new FormControl("", Validators.required),
       seats: new FormControl("", Validators.required),
       busType: new FormControl("")
     })
   }
 
-  get details() { return this.busForm.get('details') }
   get plateNo() { return this.busForm.get('plateNo') }
   get seats() { return this.busForm.get('seats') }
 
   onSubmit() {
-    console.log(this.busForm.value)
+    const formValues = this.busForm.value;
+    this.bus = new Bus(formValues.plateNo, formValues.seats, formValues.busType, []);
+    this.busSer.addBus(this.bus).subscribe(
+      (data) => {
+        console.log(data);
+        sessionStorage.setItem("busData", JSON.stringify(data));
+        alert("Bus was added successfully!");
+      }
+    );
   }
 
 
