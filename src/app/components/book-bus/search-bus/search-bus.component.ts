@@ -25,7 +25,12 @@ export class SearchBusComponent implements OnInit {
 
   onSubmit() {
     const formValues = this.busSearchForm.value;
-    this.scheduleSer.getSchedules(formValues.startingPoint, formValues.destination, formValues.departureDate.split('T')[0]).subscribe(
+    // this.scheduleSer.getSchedules(formValues.startingPoint, formValues.destination, formValues.departureDate.split('T')[0]).subscribe(
+    //   (data) => {
+    //     this.scheduleSer.updateSchedules(data);
+    //   }
+    // );
+    this.scheduleSer.getSchedules(formValues.startingPoint, formValues.destination).subscribe(
       (data) => {
         this.scheduleSer.updateSchedules(data);
       }

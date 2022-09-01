@@ -13,9 +13,13 @@ export class ScheduleService {
   constructor(private httpSer: HttpClient) { }
 
 
-  getSchedules(startingPoint: string, destination: string, scheduleDate: string): Observable<any> {
-    // return this.httpSer.get<Schedule[]>(this.baseUrl + "?startingPoint=" + startingPoint + "&destination=" + destination + "&scheduleDate=" + scheduleDate);
-    return this.httpSer.get<Schedule[]>(this.baseUrl + "/schedules/" + startingPoint + "/" + destination + "/" + scheduleDate);
+  // getSchedules(startingPoint: string, destination: string, scheduleDate: string): Observable<any> {
+  //   // return this.httpSer.get<Schedule[]>(this.baseUrl + "?startingPoint=" + startingPoint + "&destination=" + destination + "&scheduleDate=" + scheduleDate);
+  //   return this.httpSer.get<Schedule[]>(this.baseUrl + "/schedules/" + startingPoint + "/" + destination + "/" + scheduleDate);
+  // }
+
+  getSchedules(startingPoint: string, destination: string): Observable<any> {
+    return this.httpSer.get<Schedule[]>(this.baseUrl + "/schedules/" + startingPoint + "/" + destination);
   }
 
   updateSchedules(schedules: Schedule[]) {
