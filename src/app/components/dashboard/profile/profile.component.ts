@@ -60,7 +60,7 @@ export class ProfileComponent implements OnInit {
     const updatedUser = new User(formData.name, this.userData.fullName, this.userData.password, formData.gender, formData.address, formData.email, this.userData.contactNo, formData.dob);
     this.userService.updateUser(updatedUser).subscribe(
       (data) => {
-        sessionStorage.setItem("userData", data);
+        sessionStorage.setItem("userData", JSON.stringify(data));
       }
     );
     this.disableFields();

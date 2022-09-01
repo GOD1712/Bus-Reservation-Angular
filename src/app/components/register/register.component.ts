@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/Entities/User';
 import { UserService } from 'src/app/services/user.service';
@@ -18,16 +18,25 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registrationForm = new FormGroup({
-      fullName: new FormControl(""),
-      userName: new FormControl(""),
-      password: new FormControl(""),
-      gender: new FormControl(""),
+      fullName: new FormControl("", Validators.required),
+      userName: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required),
+      gender: new FormControl("", Validators.required),
       dob: new FormControl(""),
-      email: new FormControl(""),
-      mobileNo: new FormControl(""),
-      address: new FormControl("")
+      email: new FormControl("", [Validators.required, Validators.email]),
+      mobileNo: new FormControl("", [Validators.required, Validators.pattern("[0-9 ]{10}")]),
+      address: new FormControl("", [Validators.required, Validators.minLength(10)])
     });
   }
+
+  get fullName() { return this.registrationForm.get('fullName') }
+  get userName() { return this.registrationForm.get('userName') }
+  get password() { return this.registrationForm.get('password') }
+  get gender() { return this.registrationForm.get('gender') }
+  get dob() { return this.registrationForm.get('dob') }
+  get email() { return this.registrationForm.get('email') }
+  get mobileNo() { return this.registrationForm.get('mobileNo') }
+  get address() { return this.registrationForm.get('address') }
 
   onSubmit() {
     const formValues = this.registrationForm.value;
